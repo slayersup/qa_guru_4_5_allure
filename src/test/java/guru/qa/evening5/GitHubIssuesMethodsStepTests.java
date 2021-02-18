@@ -31,6 +31,8 @@ public class GitHubIssuesMethodsStepTests {
     @Test
     @Disabled
     public void createIssueWithNameTest(){ // method equals to previous one, just to test Allure with 2 tests
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
         steps.openMainPage();
 
         steps.searchForRepository(REPOSITORY);
